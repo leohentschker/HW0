@@ -29,21 +29,21 @@ http://wiki.python.org/moin/BeginnersGuide
 
 To get started: 
 
-     > mkdir HW0 
-     > cd HW0
-     > wget harvardnlp.github.io/CS182/HW/HW0/util.py
+     > git clone https://github.com/CS182/HW0.git
      > python
 
 Once you have started a Python session within your `HW0` directory, complete the definitions of the classes and functions by editing `util.py`. Alternatively, you can use any other editor and only use the command line to run the files. To test your code, add a main function to `util.py`, and add to it a call the method you want to test. 
 
 (Also this assignment file itself is valid Python! You can download it here to run its tests directly: 
 
-     > wget harvardnlp.github.io/CS182/HW/HW0/HW0.py
+     > python HW0.py
 
 See http://ipython.org/ for more details) 
 
 
-    import util
+```python
+import util
+```
 
 ## Problems
 
@@ -55,9 +55,11 @@ Do all six problems. Unless otherwise noted, your functions should be non-destru
 Write a function called `matrix_multiply` which multiplies two 2-dimensional lists of real numbers. For instance,
 
 
-    mm = util.matrix_multiply([[1, 2], [3, 4]], [[4, 3], [2, 1]]) 
-    # should evaluate to
-    assert(mm == [[8, 5], [20, 13]])
+```python
+mm = util.matrix_multiply([[1, 2], [3, 4]], [[4, 3], [2, 1]]) 
+# should evaluate to
+assert(mm == [[8, 5], [20, 13]])
+```
 
 You may assume that the dimensions of the input arrays are compatible. Your function should return the resultant matrix. If you are not familiar with lists in Python, you may want to read about them here:
 
@@ -71,10 +73,12 @@ Complete the definitions of the methods `init`, `push` and `pop` in the Python c
 
 
 
-    q = util.MyQueue()
-    q.push(1); q.push(2)
-    # should evaluate to
-    assert(q.pop() == 1)
+```python
+q = util.MyQueue()
+q.push(1); q.push(2)
+# should evaluate to
+assert(q.pop() == 1)
+```
 
 If you are unfamiliar with deques and class declarations in Python, read about them here:
 
@@ -100,21 +104,27 @@ We will call two stacks or two queues _equal_ if and only if they contain the sa
 Write three functions called `add_position_iter`, `add_position_recur`, and `add_position_map`, using iteration, recursion, and the built-in map function, respectively. All the versions should take a list of numbers and return a new list containing, in order, each of the original numbers incremented by the position of that number in the list. Positions in lists are numbered starting with 0, so:
 
 
-    ret = util.add_position_iter([7, 5, 1, 4])
-    assert(ret == [7, 6, 3, 7])
+```python
+ret = util.add_position_iter([7, 5, 1, 4])
+assert(ret == [7, 6, 3, 7])
+```
 
 Remember that this function should not be destructive i.e.,
 
 
-    a = [7, 5, 1, 4]
-    ret = util.add_position_iter(a)
-    assert(a != [7, 6, 3, 7])
+```python
+a = [7, 5, 1, 4]
+ret = util.add_position_iter(a)
+assert(a != [7, 6, 3, 7])
+```
 
 Furthermore, your function should also take an optional argument number_from which, although its default value should be 0, can be used to specify a different value from which to start numbering positions, such that instead of incrementing the first element by 0, the second by 1, etc., the function will increment the first element by the value of number_from, the second element by number_from+1,etc. For example:
 
 
-    ret = util.add_position_iter([0, 0, 3, 1], number_from=3)
-    assert(ret == [3, 4, 8, 7])
+```python
+ret = util.add_position_iter([0, 0, 3, 1], number_from=3)
+assert(ret == [3, 4, 8, 7])
+```
 
 ### Problem 5
 
@@ -133,19 +143,23 @@ An example behavior is as follows:
 
 
 
-    roster = {'kyu': set(['cs182']), 'david': set(['cs182'])}
-    util.remove_course(roster, 'kyu', 'cs182')
-    assert(roster == {'kyu': set([]), 'david': set(['cs182'])})
+```python
+roster = {'kyu': set(['cs182']), 'david': set(['cs182'])}
+util.remove_course(roster, 'kyu', 'cs182')
+assert(roster == {'kyu': set([]), 'david': set(['cs182'])})
+```
 
 ### Problem 6
 Now write a function called `copy_remove_course`. The specifications are the same as above except the function should now be non-destructive. An example behavior is as follows:
 
 
-    roster = {'kyu': set(['cs182']), 'david': set(['cs182'])}
-    new_roster = util.copy_remove_course(roster, 'kyu', 'cs182')
-    assert(roster == {'kyu': set(['cs182']), 'david': set(['cs182'])})
-    assert(new_roster == {'kyu': set([]), 'david': set(['cs182'])})
+```python
+roster = {'kyu': set(['cs182']), 'david': set(['cs182'])}
+new_roster = util.copy_remove_course(roster, 'kyu', 'cs182')
+assert(roster == {'kyu': set(['cs182']), 'david': set(['cs182'])})
+assert(new_roster == {'kyu': set([]), 'david': set(['cs182'])})
 
+```
 
 Hint: _copy_ the original roster and apply remove_course from Problem 5.
 
