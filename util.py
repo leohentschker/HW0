@@ -57,8 +57,7 @@ def add_position_map(lst, number_from=0):
 def remove_course(roster, student, course):
     pass
 
-def deep_copy(roster):
-    pass
+## Problem 6
 
 def copy_remove_course(roster, student, course):
     pass
