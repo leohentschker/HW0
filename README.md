@@ -2,8 +2,8 @@
 # CS 182: Artificial Intelligence
 #Assignment 0: Python Review
 
-* Fall 2015
-* Due: September 11, 5pm
+* Fall 2016
+* Due: September 9, 5pm
 
 
 ## Introduction
@@ -30,6 +30,7 @@ http://wiki.python.org/moin/BeginnersGuide
 To get started: 
 
      > git clone https://github.com/CS182/HW0.git
+     > cd HW0
      > python
 
 Once you have started a Python session within your `HW0` directory, complete the definitions of the classes and functions by editing `util.py`. Alternatively, you can use any other editor and only use the command line to run the files. To test your code, add a main function to `util.py`, and add to it a call the method you want to test. 
