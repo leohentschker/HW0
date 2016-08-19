@@ -35,16 +35,15 @@ To get started:
 
 Once you have started a Python session within your `HW0` directory, complete the definitions of the classes and functions by editing `util.py`. Alternatively, you can use any other editor and only use the command line to run the files. To test your code, add a main function to `util.py`, and add to it a call the method you want to test. 
 
-(Also this assignment file itself is valid Python! You can download it here to run its tests directly: 
-
-     > python HW0.py
-
-See http://ipython.org/ for more details) 
-
-
 ```python
 import util
 ```
+
+Also this assignment file itself is valid Python! You can download it here to run its tests directly: 
+
+     > python HW0.py
+
+See http://ipython.org/ for more details.
 
 ## Problems
 
@@ -169,6 +168,6 @@ http://docs.python.org/2/library/copy.html
 
 ## Submission
 
-The assignment should be completed individually. You are encouraged to consult online sources and post questions on Piazza. You are allowed, and encouraged to, discuss problems with your peers; however you may not share code. Submit your modified `util.py` file via git to `bgreen@g.harvard.edu`. If you still have problems after consulting Python resources, you are encouraged to consult your peers and use the Piazza discussion forum.
+The assignment should be completed individually. You are encouraged to consult online sources and post questions on Piazza. You are allowed, and encouraged to, discuss problems with your peers; however, you may not share code. Submit your modified `util.py` to Canvas by the due date. If you still have problems after consulting Python resources, you are encouraged to consult your peers and use the Piazza discussion forum.
 
 Good luck!
