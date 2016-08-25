@@ -3,7 +3,7 @@
 #Assignment 0: Python Review
 
 * Fall 2016
-* Due: September 9, 5pm
+* Due: September 9th, 5pm
 
 
 ## Introduction
@@ -27,19 +27,12 @@ https://www.dropbox.com/s/9eamgwnohs82e8c/tutorial.html
 
 http://wiki.python.org/moin/BeginnersGuide
 
-To get started: 
+To get started after following the Github classroom link, type
 
-     > git clone https://github.com/CS182/HW0.git
-     > cd HW0
-     > python
+     > git clone git@github.com:CS182/homework-0-yourname.git hw0
+     > cd hw0
 
-Once you have started a Python session within your `HW0` directory, complete the definitions of the classes and functions by editing `util.py`. Alternatively, you can use any other editor and only use the command line to run the files. To test your code, add a main function to `util.py`, and add to it a call the method you want to test. 
-
-```python
-import util
-```
-
-Also this assignment file itself is valid Python! You can download it here to run its tests directly: 
+Complete the definitions of the required classes and functions by editing `util.py`. Alternatively, you can use any other editor and only use the command line to run the files. To test your code, add a main function to `util.py`, and add to it a call the method you want to test. The assignment file HW0.py can also be used to run tests directly: 
 
      > python HW0.py
 
@@ -140,7 +133,6 @@ http://docs.python.org/tutorial/datastructures.html#sets
 http://docs.python.org/tutorial/datastructures.html#dictionaries
 
 An example behavior is as follows:
-
 
 
 ```python
