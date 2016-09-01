@@ -1,4 +1,5 @@
 import util
+import types
 
 # ### Problem 1
 # 
@@ -16,6 +17,11 @@ q.push(1); q.push(2)
 # should evaluate to
 assert(q.pop() == 1)
 
+s = util.MyStack()
+s.push(1)
+s.push(2)
+assert q.pop() == 2
+
 # ### Problem 3
 # For the two classes written in Problem 2, override __eq__, __ne__, and __str__ methods. You can read about these methods in detail here:
 # 
@@ -31,19 +37,72 @@ assert(q.pop() == 1)
 # 
 # We will call two stacks or two queues _equal_ if and only if they contain the same elements and in the same order. You may assume that only elements they contain are integers.
 
+s1 = util.MyStack()
+s2 = util.MyStack()
+
+q1 = util.MyQueue()
+q2 = util.MyQueue()
+
+# make sure that the empty queue is equal to the empty queue
+# and the empty stack is equal to the empty stack
+assert q1 == q2 and s1 == s2
+
+# make sure that popping on empty stacks and queues
+# returns None
+assert s1.pop() is None and q1.pop() is None
+
+# make sure that a stack isn't equal to a queue
+assert s1 != q1
+
+# add an element to one of the stacks and one of the
+# queues and make sure that __ne__ works
+s1.push(1)
+q1.push(1)
+
+assert q1 != q2 and s1 != s2
+
+# make sure that __ne__ works when the elements are different
+s2.push(2)
+q2.push(2)
+assert q1 != q2 and s1 != s2
+
+# make sure that __ne__ works when the elements are just in the wrong
+# order
+s1.push(2)
+q1.push(2)
+
+s2.push(1)
+q2.push(1)
+assert q1 != q2 and s1 != s2
+
+# make sure that the string representation works
+assert isinstance(str(s1), types.StringType)
+assert isinstance(str(q1), types.StringType)
+
 # ### Problem 4
 # Write three functions called `add_position_iter`, `add_position_recur`, and `add_position_map`, using iteration, recursion, and the built-in map function, respectively. All the versions should take a list of numbers and return a new list containing, in order, each of the original numbers incremented by the position of that number in the list. Positions in lists are numbered starting with 0, so:
 
-ret = util.add_position_iter([7, 5, 1, 4])
-assert(ret == [7, 6, 3, 7])
+iter_ret = util.add_position_iter([7, 5, 1, 4])
+recur_ret = util.add_position_recur([7, 5, 1, 4])
+map_ret = util.add_position_map([7, 5, 1, 4])
+
+assert iter_ret == recur_ret == map_ret
+assert(iter_ret == [7, 6, 3, 7])
+
 # Remember that this function should not be destructive i.e.,
 a = [7, 5, 1, 4]
-ret = util.add_position_iter(a)
+iter_ret = util.add_position_iter(a)
+recur_ret = util.add_position_recur(a)
+map_ret = util.add_position_map(a)
 assert(a != [7, 6, 3, 7])
+assert(a == [7, 5, 1, 4])
 
 # Furthermore, your function should also take an optional argument number_from which, although its default value should be 0, can be used to specify a different value from which to start numbering positions, such that instead of incrementing the first element by 0, the second by 1, etc., the function will increment the first element by the value of number_from, the second element by number_from+1,etc. For example:
-ret = util.add_position_iter([0, 0, 3, 1], number_from=3)
-assert(ret == [3, 4, 8, 7])
+iter_ret = util.add_position_iter([0, 0, 3, 1], number_from=3)
+recur_ret = util.add_position_recur([0, 0, 3, 1], number_from=3)
+map_ret = util.add_position_map([0, 0, 3, 1], number_from=3)
+assert iter_ret == recur_ret == map_ret
+assert(iter_ret == [3, 4, 8, 7])
 
 
 # ### Problem 5
