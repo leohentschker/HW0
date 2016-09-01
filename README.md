@@ -27,11 +27,6 @@ https://www.dropbox.com/s/9eamgwnohs82e8c/tutorial.html
 
 http://wiki.python.org/moin/BeginnersGuide
 
-To get started after following the Github classroom link, type
-
-     > git clone git@github.com:harvard-ml-courses/CS182-f16-hw0-username.git HW0
-     > cd HW0
-
 Complete the definitions of the required classes and functions by editing `util.py`. Alternatively, you can use any other editor and only use the command line to run the files. To test your code, add a main function to `util.py`, and add to it a call the method you want to test. The assignment file HW0.py can also be used to run tests directly: 
 
      > python HW0.py
